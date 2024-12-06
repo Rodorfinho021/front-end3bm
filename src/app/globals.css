@@ -40,3 +40,28 @@ a {
     color-scheme: dark;
   }
 }
+
+
+/* styles/globals.css */
+header {
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+header nav {
+  display: flex;
+  justify-content: end;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 30px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+

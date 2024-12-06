@@ -1,13 +1,16 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import styles from "./globals.css"; // Make sure the correct import for styles is used
 
+// Custom fonts
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "./fonts/GeistVF.woff", // Ensure this path is correct
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "./fonts/GeistMonoVF.woff", // Ensure this path is correct
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -21,6 +24,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <header className={`${geistSans.variable} ${geistMono.variable}`}>
+          <div className={styles.geral}>
+            <nav>
+              <a href="/">Home</a>
+              <a href="/listas">Lista</a>
+              <a href="/props">Props</a>
+            </nav>
+            <div className={styles.logo}></div>
+          </div>
+        </header>
+
         {children}
       </body>
     </html>
